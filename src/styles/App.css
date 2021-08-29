@@ -1,0 +1,161 @@
+.box__custom {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s;
+}
+.box__custom:hover {
+  box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.picture {
+  transition: all 0.4s;
+  backface-visibility: hidden;
+}
+.box__custom:hover .picture {
+  transform: scale(1.3);
+}
+.box__custom:hover .button-edit {
+  opacity: 1;
+  left: 0px;
+}
+.box__custom:hover .button-delete {
+  opacity: 1;
+  right: 0px;
+}
+.button-delete,
+.button-edit {
+  position: absolute;
+  top: 0;
+  border-radius: 0;
+  transition: all 0.5s;
+
+  z-index: 1111;
+}
+.button-edit {
+  opacity: 0;
+  left: -100px;
+  border-bottom-right-radius: 30px;
+}
+.button-delete {
+  right: -100px;
+  border-bottom-left-radius: 30px;
+}
+.Images {
+  width: 250px;
+  height: 300px;
+}
+.Title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Price {
+  font-size: medium;
+  font-weight: 700;
+  color: crimson;
+  margin-top: 10px;
+}
+
+.has-background-light {
+  background-color: crimson;
+}
+
+.req {
+  color: red;
+  margin: 20px 5px 20px 5px;
+}
+
+@media screen and (min-width: 769px), print {
+  .columns1:not(.is-desktop) {
+    display: block;
+  }
+}
+
+.subCols {
+  display: flex;
+}
+
+.btnSub {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  background-color: #4caf50;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.container1 {
+  margin: auto;
+  width: 45%;
+}
+
+@media screen and (min-width: 769px), print {
+  .container1 {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px), print {
+  .container1 {
+    width: 100%;
+  }
+  .input {
+    max-width: 90%;
+  }
+
+  ::placeholder {
+    font-size: 14px;
+  }
+}
+
+.addProd {
+  float: right;
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar > .container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .navbar,
+  .navbar-end,
+  .navbar-menu,
+  .navbar-start {
+    align-items: stretch;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .navbar-menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: #fff;
+    box-shadow: none;
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .navbar-end {
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+}
